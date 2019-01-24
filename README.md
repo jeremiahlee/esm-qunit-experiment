@@ -14,6 +14,8 @@ I wrote a [test of using `esm` with `qunit --require`](https://github.com/jeremi
 
 `npm install` to get `esm` package.
 
+`npm install -g qunit` to get `qunit` globally.
+
 `qunit --require esm test.js` to run the test.
 
 ## What actually happened?
