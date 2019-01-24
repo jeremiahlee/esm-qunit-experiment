@@ -1,10 +1,22 @@
 # QUnit + ESM test
 
-Doesn't seem to work.
+## Tell us about your runtime:
+
+* **QUnit version**: 2.9.1
+* **What environment are you running QUnit in? (e.g., browser, Node)**: Node v11.7.0
+* **How are you running QUnit? (e.g., script, testem, Grunt)**: CLI
+
+## What are you trying to do?
+
+Pull request qunitjs/qunit#1271 added the `--require` option, but it does not seem to work with [`esm`](https://www.npmjs.com/package/esm), as @jdalton [hoped](https://github.com/qunitjs/qunit/pull/1271#issuecomment-376379279).
+
+I wrote a [test of using `esm` with `qunit --require`](https://github.com/jeremiahlee/esm-qunit-experiment). Perhaps I am not doing it correctly. If you can help me figure this out, I would happily contribute to qunitjs/qunit#144.
 
 `npm install` to get `esm` package.
 
-`qunit --require esm test.js` to run the test. Results:
+`qunit --require esm test.js` to run the test.
+
+## What actually happened?
 
 ```
 TAP version 13
@@ -37,3 +49,19 @@ SyntaxError: Unexpected token {
 # todo 0
 # fail 1
 ```
+
+## What did you expect to happen?
+
+```
+TAP version 13
+ok 1 Hinkle finkle dinkle doo
+1..1
+# pass 1
+# skip 0
+# todo 0
+# fail 0
+```
+
+
+
+
